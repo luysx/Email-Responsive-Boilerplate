@@ -1,0 +1,417 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <title>MercadoPago</title>
+    <style type="text/css"> /* ESTILOS PARA CLIENTES ESPECÍFICOS */
+    #outlook a {
+        padding: 0; /*Fuerza a Outlook a proveer un "vista tipo navegador" del mensaje*/
+    }
+
+    .ReadMsgBody {
+        width: 100%;
+    }
+
+    .ExternalClass {
+        width: 100%;
+    }
+
+    .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
+        line-height: 100%; /*Fuerza a Hotmail a mostrar un interlineado normal */
+    }
+
+    body, table, td, a {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+    }
+
+    /* Previene que Webkit y Windows Mobile cambien el tamaño por defecto del texto. */
+    table, td {
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+    }
+
+    /* remueve el espacio entre tablas en Outlook 2007 y superior. */
+    img {
+        -ms-interpolation-mode: bicubic;
+    }
+
+    /* Permite un renderizado suave de las imágenes en Internet Explorer. */
+    /* iOS BLUE LINKS */
+    .appleBody a {
+        color: #68440a;
+        text-decoration: none;
+    }
+
+    .appleFooter a {
+        color: #999999;
+        text-decoration: none;
+    }
+
+    /* RESET */
+    body {
+        height: 100% !important;
+        margin: 0;
+        padding: 0;
+        width: 100% !important;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+        border: 0;
+        height: auto;
+        line-height: 100%;
+        outline: none;
+        text-decoration: none;
+    }
+
+    table {
+        border-collapse: collapse !important;
+    }
+
+    @media only screen and (max-width: 590px) {
+        /* estilos para dispositivos q aceptan media queries tamaño de dispositivo grandes */
+        body[yahoo] .deviceWidth {
+            width: 440px !important;
+            padding: 0;
+        }
+
+        body[yahoo] .icon {
+            width: 150px !important;
+            padding: 0;
+        }
+
+        body[yahoo] .product {
+            width: 282px !important;
+            padding: 0;
+            float: none !important;
+        }
+
+        body[yahoo] .center {
+            text-align: center !important;
+        }
+
+        /* Ajustar el diseño de la imagen del logo */
+        td[class="center"] {
+            text-align: center !important;
+        }
+
+        td[class="center"] img {
+            margin: 0 auto !important;
+        }
+
+        /* Estas clases ocultan el contenido en mobile */
+        td[class="mobile-hide"] {
+            display: none;
+        }
+
+        img[class="mobile-hide"] {
+            display: none !important;
+        }
+
+        /* mostras las imagenes al 100%*/
+        img {
+            width: 100% !important;
+            height: auto !important;
+        }
+
+        /* Expandir  tabla al 100% */
+        table[class="deviceWidth"] {
+            width: 100% !important;
+        }
+
+        td[class="deviceWidth"] {
+            width: 100% !important;
+        }
+    }
+
+    @media only screen and (max-width: 479px) {
+        /* estilos para dispositivos q aceptan media queries tamaño de dispositivo mobile */
+        body[yahoo] .deviceWidth {
+            width: 280px !important;
+            padding: 0;
+        }
+
+        body[yahoo] .icon {
+            width: 80px !important;
+            padding: 0;
+        }
+
+        body[yahoo] .product {
+            width: 282px !important;
+            padding: 0;
+            float: none !important;
+        }
+
+        body[yahoo] .center {
+            text-align: center !important;
+        }
+
+        /* Ajustar el diseño de la imagen del logo */
+        td[class="center"] {
+            text-align: center !important;
+        }
+
+        td[class="center"] img {
+            margin: 0 auto !important;
+        }
+
+        /* Estas clases ocultan el contenido en mobile */
+        td[class="mobile-hide"] {
+            display: none;
+        }
+
+        img[class="mobile-hide"] {
+            display: none !important;
+        }
+
+        /* mostras las imagenes al 100%*/
+        img {
+            width: 100% !important;
+            height: auto !important;
+        }
+
+        /* Expandir  tabla al 100% */
+        table[class="deviceWidth"] {
+            width: 100% !important;
+        }
+
+        td[class="deviceWidth"] {
+            width: 100% !important;
+        }
+    } </style>
+</head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" yahoo="fix" style="font-family:Arial, Helvetica, sans-serif !important;">  <!-- Wrapper -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+    <tr>
+        <td width="100%" valign="top" bgcolor="#ffffff" style="padding-top:20px" align="center"><!-- Start Header-->
+            <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="deviceWidth">
+                <tr>
+                    <td width="100%" bgcolor="#ffffff"><!-- Logotipo de la marca -->
+                        <table border="0" cellpadding="0" cellspacing="0" align="left" class="deviceWidth">
+                            <tr>
+                                <td style="padding:10px 0" class="center"><a href="#" target="_blank" title="acá info"> <img src="http://www.placehold.it/400x140" alt="acá info" border="0" width="200" height="70" style=" display:inline-block; border:none; outline:none; text-decoration:none;" class="deviceWidth"> </a></td>
+                            </tr>
+                        </table>
+                        <!-- End Logo -->  <!-- Nav -->
+                        <table border="0" cellpadding="0" cellspacing="0" align="right" class="deviceWidth">
+                            <tr>
+                                <td class="center" style=" padding:10px; color:#555555; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 14px; font-weight: normal; line-height: 125%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; text-align: left;"><strong style="text-transform:uppercase;">Hola nombre y apellido,</strong><br> acá escribir texto q va al pie del nombre de usuario</td>
+                            </tr>
+                        </table>
+                        <!-- End Nav --></td>
+                </tr>
+            </table>
+            <!-- End Header --> <img src="http://placehold.it/600x600" alt="acá info" border="0" style="display: inline-block;" class="deviceWidth"/>
+
+            <div style="height:15px">&nbsp;<!-- spacer --></div>
+            <img src="http://placehold.it/600x150" alt="acá infor" border="0" style="display: inline-block;" class="deviceWidth"/>
+
+            <div style="height:15px">&nbsp;<!-- spacer --></div>
+            <!-- One Column -->
+            <table width="600" class="deviceWidth" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#f2f2f2">
+                <tr>
+                    <td bgcolor="#f2f2f2" align="center">
+                        <table border="0" cellpadding="0" cellspacing="0" bgcolor="#f2f2f2">
+                            <tbody>
+                            <tr>
+                                <td bgcolor="#2d92ec" background="http://staging.webar.net:8070/MercadoShops/images/gradiente.png" height="30" style=" background-repeat:repeat-x; background-position:top left; border:solid 1px #0e70b9;" class="deviceWidth"><a href="#" target="_blank" style=" display:block; padding:0 10px; font-family:Arial,Helvetica,sans-serif; font-size:15px; color:#fff; text-decoration:none; padding:15px; font-weight:bold; text-transform: uppercase; text-align:center; "> Botón
+                                    call to action </a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <!-- End One Column -->  <!-- 4 Columns -->
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+                <tr>
+                    <td bgcolor="#FFFFFF" style="padding:30px 0">
+                        <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="deviceWidth">
+                            <tr>
+                                <td>
+                                    <table border="0" cellpadding="0" cellspacing="0" align="right" class="deviceWidth">
+                                        <tr>
+                                            <td class="center" style=" font-family:Tahoma, Geneva, sans-serif; font-size:11px; color:#3474a0; text-align:center"><a href="#" target="_blank"> <img src="http://placehold.it/200x70" alt="acá info" border="0" width="200" height="70" style=" display:inline-block; border:none; outline:none; text-decoration:none; "> </a>
+                                                <hr size="1" color="#CCCCCC">
+                                                Copyright © 2015
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <!-- End 4 Columns -->  <!-- Start LogoFooter-->
+            <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="deviceWidth">
+                <tr>
+                    <td width="100%" bgcolor="#ffffff"><!-- tech -->
+                        <table border="0" cellpadding="0" cellspacing="0" align="center" class="deviceWidth">
+                            <tr>
+                                <td class="center" style=" font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#808080; text-align:center; padding:10px 0"> Mirá la <a href="#" style="color:#00b2ef; text-decoration:underline"> versión online </a> | Agreganos a tu lista de contactos ( <a href="#" target="_blank" style="color:#00b2ef; text-decoration:underline"> info@mail.com </a> ) | <a href="#" target="_blank" style="color:#00b2ef; text-decoration:underline"> Cancelá la
+                                    suscripción </a></td>
+                            </tr>
+                            <tr>
+                                <td class="center" style=" font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#808080; text-align:justify; padding:10px 0">Curabitur bibendum eu ante non rhoncus. Pellentesque fermentum lacus tortor, sed efficitur dui facilisis eget. Etiam consequat feugiat aliquet. Donec turpis lorem, placerat sit amet lobortis sed, luctus quis augue. Donec diam nunc, consectetur euismod lectus in, lobortis ullamcorper lacus. Fusce neque justo, eleifend bibendum nisl
+                                    ut, faucibus rutrum lectus. Nam non ligula elementum, finibus nisl eu, mollis eros.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="center" style=" font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#808080; text-align:justify; padding:10px 0">Fusce nibh mi, convallis sed rhoncus quis, porta eu felis. Aenean cursus nisl a ex pharetra imperdiet. Donec eget mauris aliquet, luctus dolor in, interdum eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed urna eget lacus porttitor consequat. Curabitur elementum sapien sit amet mi tempor, ut ultricies
+                                    neque malesuada. Proin blandit neque molestie iaculis porta. Phasellus nec nulla cursus, tristique turpis nec, auctor risus. Maecenas at ex mollis, interdum tortor vel, molestie ipsum. Suspendisse tempor nisl quis mauris sodales feugiat. Nam in velit at neque tincidunt cursus sed vel ante. Nullam orci tellus, tincidunt sit amet tempor eget, congue vitae sem. Vivamus pulvinar odio sed posuere scelerisque.
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- End tech --></td>
+                </tr>
+            </table>
+            <div style="height:25px">&nbsp;</div>
+        </td>
+    </tr>
+</table>
+<!-- End Wrapper -->
+<style type="text/css"> /* ESTILOS PARA CLIENTES ESPECÍFICOS */
+#outlook a {
+    padding: 0; /*Fuerza a Outlook a proveer un "vista tipo navegador" del mensaje*/
+}
+
+.ReadMsgBody {
+    width: 100%;
+}
+
+.ExternalClass {
+    width: 100%;
+}
+
+.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
+    line-height: 100%; /*Fuerza a Hotmail a mostrar un interlineado normal */
+}
+
+body, table, td, a {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/* Previene que Webkit y Windows Mobile cambien el tamaño por defecto del texto. */
+table, td {
+    mso-table-lspace: 0pt;
+    mso-table-rspace: 0pt;
+}
+
+/* remueve el espacio entre tablas en Outlook 2007 y superior. */
+img {
+    -ms-interpolation-mode: bicubic;
+}
+
+/* Permite un renderizado suave de las imágenes en Internet Explorer. */
+/* iOS BLUE LINKS */
+.appleBody a {
+    color: #68440a;
+    text-decoration: none;
+}
+
+.appleFooter a {
+    color: #999999;
+    text-decoration: none;
+}
+
+/* RESET */
+body {
+    height: 100% !important;
+    margin: 0;
+    padding: 0;
+    width: 100% !important;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    border: 0;
+    height: auto;
+    line-height: 100%;
+    outline: none;
+    text-decoration: none;
+}
+
+table {
+    border-collapse: collapse !important;
+}
+
+@media only screen and (max-width: 590px) {
+    /* estilos para dispositivos q aceptan media queries tamaño de dispositivo grandes */
+    body[yahoo] .deviceWidth {
+        width: 440px !important;
+        padding: 0;
+    }
+
+    body[yahoo] .icon {
+        width: 150px !important;
+        padding: 0;
+    }
+
+    body[yahoo] .product {
+        width: 282px !important;
+        padding: 0;
+        float: none !important;
+    }
+
+    body[yahoo] .center {
+        text-align: center !important;
+    }
+
+    /* Ajustar el diseño de la imagen del logo */
+    td[class="center"] {
+        text-align: center !important;
+    }
+
+    td[class="center"] img {
+        margin: 0 auto !important;
+    }
+
+    /* Estas clases ocultan el contenido en mobile */
+    td[class="mobile-hide"] {
+        display: none;
+    }
+
+    img[class="mobile-hide"] {
+        display: none !important;
+    }
+
+    /* mostras las imagenes al 100%*/
+    img[class="img-max"] {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Expandir  tabla al 100% */
+    table[class="deviceWidth"] {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    /* estilos para dispositivos q aceptan media queries tamaño de dispositivo mobile */
+    body[yahoo] .deviceWidth {
+        width: 280px !important;
+        padding: 0;
+    }
+
+    body[yahoo] .icon {
+        width: 80px !important;
+        padding: 0;
+    }
+
+    body[yahoo] .product {
+        width: 282px !important;
+        padding: 0;
+        float: none !important;
+    }
+
+    body[yahoo] .center {
+        text-align: center !important;
+    }
+} </style>
+</body>
+</html>
